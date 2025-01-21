@@ -25,3 +25,8 @@ Build and run example
 ```bash
 odin run .
 ```
+or
+```bash
+odin build .
+./odin_template
+```
