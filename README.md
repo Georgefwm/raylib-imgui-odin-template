@@ -1,5 +1,7 @@
 ## raylib imgui template project
 
+A template to start a simple game using raylib and imgui in odin
+
 ### Build
 
 
@@ -30,3 +32,8 @@ or
 odin build .
 ./odin_template
 ```
+
+### Credit
+
+[lucaspoffo](https://gist.github.com/lucaspoffo) - Odin ImGui raylib implementation(that did need updating).
+
