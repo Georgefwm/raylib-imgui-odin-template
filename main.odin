@@ -4,13 +4,13 @@ import rl       "vendor:raylib"
 import imgui_rl "imgui_impl_raylib"
 import imgui    "dependancies/odin-imgui"
 
-SCREEN_HEIGHT : i32 = 800
-SCREEN_WIDTH  : i32 = 800
+SCREEN_WIDTH  : i32 = 1366
+SCREEN_HEIGHT : i32 = 768
 
 circle_position : rl.Vector2 = { 400, 400 }
 
 main :: proc() {
-    rl.InitWindow(SCREEN_HEIGHT, SCREEN_WIDTH, "App Name")
+    rl.InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "App Name")
     defer rl.CloseWindow()
 
     rl.SetTargetFPS(60)
