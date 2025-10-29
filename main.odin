@@ -1,5 +1,10 @@
 package main
 
+/*
+If running into issues with platform_io on linux, please see:
+https://github.com/Georgefwm/raylib-imgui-odin-template/issues/1
+*/
+
 import rl       "vendor:raylib"
 import imgui_rl "imgui_impl_raylib"
 import imgui    "dependancies/odin-imgui"
@@ -35,6 +40,8 @@ main :: proc() {
 
         render_game()
 
+        // You dont have to have this seperated as draws are submitted in the imgui render calls
+        // (for the UI to be on top).
         render_ui()
 
         imgui.Render()
@@ -66,8 +73,9 @@ update_game :: proc() {
 }
 
 render_game :: proc() {
-    // Clear background prevents that trippy effects like when you go off-map is cs.
     rl.ClearBackground(rl.RAYWHITE)
+
+    // Draw commands go after ClearBackground call.
 
     rl.DrawCircle(cast(i32)circle_position.x, cast(i32)circle_position.y, 50, rl.RED)
 }
